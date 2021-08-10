@@ -1,0 +1,75 @@
+#body {
+    background-color: #90ee90;
+}
+
+.calcBody {
+    background-color: antiquewhite;
+    margin: auto;
+    width:35%;
+    height: auto;
+}
+
+.calcTopBody {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 
+    ". a a ."
+    ". b c .";
+}
+
+#display {
+    background-color: rgb(204, 204, 204);
+    border-style: solid;
+    border-color: blueviolet;
+    border-width: thin;
+    margin: auto;
+    width: 11em;
+    height: 4em;
+    grid-area: a;
+}
+
+#clearBtn {
+    background-color: rgb(204, 204, 204);
+    border-style: solid;
+    border-color: blueviolet;
+    border-width: thin;
+    margin: auto;
+    width: 4em;
+    height: 4em;
+    grid-area: b;
+}
+
+#deleteBtn {
+    background-color: rgb(204, 204, 204);
+    border-style: solid;
+    border-color: blueviolet;
+    border-width: thin;
+    margin: auto;
+    width: 4em;
+    height: 4em;
+    grid-area: c;
+}
+
+.calcBottomBody {
+    display: grid;
+    margin: auto;
+    grid-gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1em 1em 1em 1em;
+    grid-template-rows: 1em 1em 1em 1em 1em;
+    /* grid-template-areas:  
+    "d d d d"
+    "d d d d"
+    "d d d d"
+    "d d d d"; */
+}
+
+.numberBtn {
+    width: 1em;
+    height: 1em;
+    margin: auto;
+    border-style: solid;
+    border-color: brown;
+    border-width: thin;   
+}
