@@ -1,20 +1,28 @@
 #body {
     background-color: #90ee90;
-    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .calcBody {
     background-color: #aaa;
     padding-top: 2em;
+    padding-bottom: 2em;
     margin: auto;
-    max-width:25%;
+    /* min-width:15em; */
+    width:20em;
     /* height: 23em; */
     min-height: 23em;
 } 
 
 .calcTopBody {
     display: grid;
-    grid-gap: 1em;
+    row-gap: 1em;
+    column-gap: 0.5em;
     grid-template-areas: 
     "a a a a"
     ". b c .";
@@ -28,7 +36,7 @@
     border-color: black;
     border-width: thin;
     margin: auto;
-    width: 75%;
+    width: 13.75em;
     height: 4em;
     grid-area: a;
 }
@@ -40,20 +48,25 @@
     border-color: black;
     border-width: thin;
     text-align: center;
-    margin: auto;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 6.625em;
     height: 2em;
     grid-area: b;
 }
 
 #deleteBtn {
+    display: grid;
     background-color: #eee;
     border-style: solid;
     border-color: black;
     border-width: thin;
     text-align: center;
-    margin: auto;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    width: 6.625em;
     height: 2em;
     grid-area: c;
 }
