@@ -41,6 +41,12 @@
     grid-area: a;
 }
 
+#displayNum {
+    position: relative;
+    justify-self: end;
+    align-self: end;
+}
+
 #clearBtn {
     display: grid;
     background-color: #eee;
