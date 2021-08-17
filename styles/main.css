@@ -45,6 +45,7 @@
     position: relative;
     justify-self: end;
     align-self: end;
+    padding-right: 0.2em;
 }
 
 #clearBtn {

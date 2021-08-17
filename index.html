@@ -10,27 +10,27 @@
             <div id="display">
             <span id="displayNum">0</span>
             </div>
-            <btn class="largeBtn" id="clearBtn">Clear</btn>
-            <btn class="largeBtn" id="deleteBtn">Delete</btn>
+            <btn class="largeBtn" id="clearBtn" onclick="clearPressed()">Clear</btn>
+            <btn class="largeBtn" id="deleteBtn" onclick="deletePressed()">Delete</btn>
         </div>
         <div class="calcBottomBody">
-            <btn class="numberBtn" id="sevenBtn">7</btn>
-            <btn class="numberBtn" id="eightBtn">8</btn>
-            <btn class="numberBtn" id="nineBtn">9</btn>
+            <btn class="numberBtn" id="sevenBtn" onclick="numberPressed(7)">7</btn>
+            <btn class="numberBtn" id="eightBtn" onclick="numberPressed(8)">8</btn>
+            <btn class="numberBtn" id="nineBtn" onclick="numberPressed(9)">9</btn>
             <btn class="numberBtn" id="divideBtn">/</btn>
     
-            <btn class="numberBtn" id="fourBtn">4</btn>
-            <btn class="numberBtn" id="fiveBtn">5</btn>
-            <btn class="numberBtn" id="sixBtn">6</btn>
+            <btn class="numberBtn" id="fourBtn" onclick="numberPressed(4)">4</btn>
+            <btn class="numberBtn" id="fiveBtn" onclick="numberPressed(5)">5</btn>
+            <btn class="numberBtn" id="sixBtn" onclick="numberPressed(6)">6</btn>
             <btn class="numberBtn" id="multiplyBtn">x</btn>
     
-            <btn class="numberBtn" id="oneBtn" value="1">1</btn>
-            <btn class="numberBtn" id="twoBtn" value ="2">2</btn>
-            <div class="numberBtn" id="threeBtn" value="3">3</div>
+            <btn class="numberBtn" id="oneBtn" value="1" onclick="numberPressed(1)">1</btn>
+            <btn class="numberBtn" id="twoBtn" value ="2" onclick="numberPressed(2)">2</btn>
+            <div class="numberBtn" id="threeBtn" value="3" onclick="numberPressed(3)">3</div>
             <btn class="numberBtn" id="subtractBtn">-</btn>
     
             <btn class="numberBtn" id="decimalBtn">.</btn>
-            <btn class="numberBtn" id="zeroBtn">0</btn>
+            <btn class="numberBtn" id="zeroBtn" value="0" onclick="numberPressed(0)">0</btn>
             <btn class="numberBtn" id="equalBtn">=</btn>
             <btn class="numberBtn" id="sumBtn">+</btn>
         </div>
