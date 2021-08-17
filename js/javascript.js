@@ -1,11 +1,9 @@
 // javascript
-// TODO Give values to each button
-// TODO Update screen with numbers when button is clicked 
-// TODO Update screen when Clear btn is pressed
-// TODO Update screen when Delete btn is pressed 
 // TODO Add in logic for summing up numbers 
 // TODO Implement other logic (sub, mult, div) 
 // TODO Add in functionality to press buttons for numbers 
+// TODO Make sure there is no overflow of numbers 
+// TODO find an improved way of calling on the onclick btn with a value passed in
 
 function numberPressed(value) {
     let displayValue = document.getElementById("displayNum").textContent
@@ -32,4 +30,14 @@ function deletePressed() {
         return
     } 
     document.getElementById("displayNum").textContent = displayValue.slice(0, displayValue.length - 1)
+}
+
+function decimalPressed() {
+    let displayValue = document.getElementById("displayNum").textContent
+    if (displayValue.includes('.')) {
+        return
+    } else {
+        let newValue = displayValue.concat('.')
+        document.getElementById("displayNum").textContent = newValue
+    }
 }
