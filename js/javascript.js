@@ -59,21 +59,22 @@ function decimalPressed() {
 }
 
 function add() {
-    if (document.getElementById("displayNum").textContent)
-    if (n1 != undefined && n2 == undefined) {
-        n2 = document.getElementById("displayNum").textContent
-        n1Num = Number(n1)
-        n2Num = Number(n2)
-        n1 = n1Num + n2Num
-        n2 = undefined
-        operandClear = 'Addition'
-        return document.getElementById("displayNum").textContent = n1Num + n2Num
-    }
-    n1 = document.getElementById("displayNum").textContent
-    console.log(`n1 is ${n1}`)
-    console.log(`n2 is ${n2}`)
+    // console.log(`${n1} ${n2}`)
+    // if (n1 == undefined) {
+    //     n1 = Number(document.getElementById("displayNum").textContent)
+    // } 
+    // else if (n1 != undefined && n2 == undefined) {
+    //     n2 = Number(document.getElementById("displayNum").textContent)
+    // }
+    // if (n1 != undefined && n2 != undefined) {
+    //     let total = Number(n1) + Number(n2)
+    //     n1 = total 
+    //     n2 = undefined
+    //     document.getElementById("displayNum").textContent = total
+    // }
+    // console.log(`${n1} ${n2}`)
+    operateFromOperand()
     operand = '+'
-    console.log(operand)
     operandClear = 'Addition'
 }
 function subtract() {
@@ -100,8 +101,11 @@ function operate() {
     n1Num = Number(n1)
     n2Num = Number(n2)
     if (operand == '+') {
-        n1 = n1Num + n2Num
+        // n1 = n1Num + n2Num
+        n1 = undefined
         n2 = undefined
+        console.log(`${n1Num} ${n2Num}`)
+        console.log(`${n1} ${n2}`)
         return  document.getElementById("displayNum").textContent = n1Num + n2Num
     }
     if (operand == '-') {
@@ -119,29 +123,18 @@ function operate() {
 }
 
 function operateFromOperand() {
-
-    if (n1 == undefined || n2 == undefined) {
-        return
+    console.log(`${n1} ${n2}`)
+    if (n1 == undefined) {
+        n1 = Number(document.getElementById("displayNum").textContent)
+    } 
+    else if (n1 != undefined && n2 == undefined) {
+        n2 = Number(document.getElementById("displayNum").textContent)
     }
-
-    n2 = document.getElementById("displayNum").textContent
-    n1Num = Number(n1)
-    n2Num = Number(n2)
-    if (operand == '+') {
-        n1 = n1Num + n2Num
+    if (n1 != undefined && n2 != undefined) {
+        let total = Number(n1) + Number(n2)
+        n1 = total 
         n2 = undefined
-        return  document.getElementById("displayNum").textContent = n1Num + n2Num
+        document.getElementById("displayNum").textContent = total
     }
-    if (operand == '-') {
-        n1 = n1Num - n2Num
-        return  document.getElementById("displayNum").textContent = n1Num - n2Num
-    }
-    if (operand == '*') {
-        n1 = n1Num * n2Num
-        return  document.getElementById("displayNum").textContent = (n1Num * n2Num)
-    }
-    if (operand == '/') {
-        n1 = n1Num / n2Num
-        return  document.getElementById("displayNum").textContent = n1Num / n2Num
-    }
+    console.log(`${n1} ${n2}`)
 }
