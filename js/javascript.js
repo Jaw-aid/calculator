@@ -89,6 +89,35 @@ function operate() {
     n2Num = Number(n2)
     if (operand == '+') {
         n1 = n1Num + n2Num
+        n2 = undefined
+        return  document.getElementById("displayNum").textContent = n1Num + n2Num
+    }
+    if (operand == '-') {
+        n1 = n1Num - n2Num
+        return  document.getElementById("displayNum").textContent = n1Num - n2Num
+    }
+    if (operand == '*') {
+        n1 = n1Num * n2Num
+        return  document.getElementById("displayNum").textContent = (n1Num * n2Num)
+    }
+    if (operand == '/') {
+        n1 = n1Num / n2Num
+        return  document.getElementById("displayNum").textContent = n1Num / n2Num
+    }
+}
+
+function operateFromOperand() {
+
+    if (n1 == undefined || n2 == undefined) {
+        return
+    }
+
+    n2 = document.getElementById("displayNum").textContent
+    n1Num = Number(n1)
+    n2Num = Number(n2)
+    if (operand == '+') {
+        n1 = n1Num + n2Num
+        n2 = undefined
         return  document.getElementById("displayNum").textContent = n1Num + n2Num
     }
     if (operand == '-') {
