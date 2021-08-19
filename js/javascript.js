@@ -13,7 +13,7 @@ function numberPressed(value) {
     let displayValue = document.getElementById("displayNum").textContent
     let newValue
 
-    if (displayValue == 0 && value == 0) {
+    if (displayValue == '0' && value == 0) {
         return
     }
 
