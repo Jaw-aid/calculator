@@ -31,8 +31,8 @@ function numberPressed(value) {
 
 function clearPressed() {
     document.getElementById("displayNum").textContent = 0
-    num1 = undefined
-    num2 = undefined
+    n1 = undefined
+    n2 = undefined
 }
 
 function deletePressed() {
@@ -59,7 +59,19 @@ function decimalPressed() {
 }
 
 function add() {
+    if (document.getElementById("displayNum").textContent)
+    if (n1 != undefined && n2 == undefined) {
+        n2 = document.getElementById("displayNum").textContent
+        n1Num = Number(n1)
+        n2Num = Number(n2)
+        n1 = n1Num + n2Num
+        n2 = undefined
+        operandClear = 'Addition'
+        return document.getElementById("displayNum").textContent = n1Num + n2Num
+    }
     n1 = document.getElementById("displayNum").textContent
+    console.log(`n1 is ${n1}`)
+    console.log(`n2 is ${n2}`)
     operand = '+'
     console.log(operand)
     operandClear = 'Addition'
